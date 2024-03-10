@@ -4,47 +4,94 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="style.css" rel="stylesheet" />
-    <title>HTML-CSS Template</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>About Me</title>
   </head>
-  <body>
-    <header>
-      <h1>
-        My name is
-        <span class="underline text-lg text-red-500">Sarah Schmittling</span>
+
+  <body class="bg-purple-50 text-gray-800 font-sans">
+    <header class="bg-purple-200 shadow-md py-6">
+      <h1 class="text-center text-3xl font-bold">
+        Hello, I'm
+        <span class="underline text-xlg text-purple-800"
+          >Sarah Schmittling!</span
+        >
       </h1>
     </header>
 
-    <div>
-      <form>
-        <label for="f">Your First Name Please!</label>
-        <input type="text" id="f" name="firstname" placeholder="Your name.." />
+    <div class="container mx-auto mt-8 px-4">
+      <div class="bg-purple-100 p-8 rounded-lg shadow-md">
+        <h2 class="text-2xl font-semibold mb-4 text-purple-800">About Me</h2>
+        <p class="text-lg text-purple-800">
+          Hello! I am a 23 year old Graphic Communications Major with two art
+          degrees under my belt. I love designing things and making cool things
+          is always fun! I love Disney and the color purple!
+        </p>
+        <div class="flex justify-center">
+          <!-- Image with Tailwind CSS classes -->
+          <img
+            src="https://i.ebayimg.com/images/g/DI4AAOSwPAJjf5FW/s-l400.jpg"
+            class="w-64 h-auto"
+          />
+        </div>
+      </div>
 
-        <label for="l">Your Last Name Please!</label>
+      <form class="bg-purple-100 p-8 rounded-lg shadow-md mt-8">
+        <h2 class="text-2xl font-semibold mb-4 text-purple-800">
+          I want to get to know you too!
+        </h2>
+        <label for="f" class="block text-lg text-purple-800"
+          >Your First Name Please!</label
+        >
+        <input
+          type="text"
+          id="f"
+          name="firstname"
+          placeholder="Your name.."
+          class="form-input mt-2 block w-full border-purple-400 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-purple-500 focus:border-purple-500"
+        />
+
+        <label for="l" class="block mt-4 text-lg text-purple-800"
+          >Your Last Name Please!</label
+        >
         <input
           type="text"
           id="l"
           name="lastname"
           placeholder="Your last name.."
+          class="form-input mt-2 block w-full border-purple-400 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-purple-500 focus:border-purple-500"
         />
 
-        <label for="state">Which state do you live?</label>
-        <select id="country" name="country">
+        <label for="state" class="block mt-4 text-lg text-purple-800"
+          >Which state do you live?</label
+        >
+        <select
+          id="country"
+          name="country"
+          class="form-select mt-2 block w-full border-purple-400 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-purple-500 focus:border-purple-500"
+        >
           <option value="Illinois">Illinois</option>
           <option value="Missouri">Missouri</option>
           <option value="Prefer not to say">Prefer not to say</option>
         </select>
 
-        <label for="Write something about yourself that you like!"
+        <label for="subject" class="block mt-4 text-lg text-purple-800"
           >Write something about yourself that you like!</label
         >
         <textarea
           id="subject"
           name="subject"
           placeholder="Write something.."
+          class="form-textarea mt-2 block w-full border-purple-400 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-purple-500 focus:border-purple-500"
           style="height: 100px"
         ></textarea>
-        <input type="submit" value="Submit" />
+        <input
+          type="submit"
+          value="Submit"
+          class="mt-6 bg-purple-500 hover:bg-purple-600 text-gray-00 font-bold py-2 px-6 rounded-md transition duration-300 ease-in-out"
+        />
       </form>
     </div>
   </body>
