@@ -32,10 +32,44 @@ function validateForm(event) {
     clearError("country");
   }
 
-  // Validator self-description
-  const description = document.getElementById("subject").value.trim();
-  if (description === "") {
-    showError("subject", "Please write something about yourself you like!");
+  // Valitador Phone Number
+
+  const phoneNumber = document.getElementById("pN").value;
+  if (state === "") {
+    showError("pN", "Please enter a phone number.");
+    const phonePattern = /^\d{3}-\d{3}-\d{4}$/;
+    if (!phonePattern.test(phoneNumber)) {
+      showError(
+        "pN",
+        "Please enter a valid 10-digit phone number (e.g., 123-456-7890)."
+      );
+    } else {
+      clearError("pN");
+    }
+
+    // Validator Email
+
+    const email = document.getElementById("Email").value;
+    if (state === "") {
+      showError("Email", "Please enter an email address.");
+      const emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
+      if (!emailPattern.test(email)) {
+        showError("Email", "Please enter a valid email address.");
+      }
+    } else {
+      clearError("Email");
+    }
+
+    // Validator self-description
+    const description = document.getElementById("subject").value.trim();
+    if (description === "") {
+      showError("subject", "Please write something about yourself you like!");
+    } else if (description.length < 10) {
+      showError(
+        "subject",
+        "Please write at least 10 characters about yourself."
+      );
+    }
   } else {
     clearError("subject");
   }
@@ -43,7 +77,7 @@ function validateForm(event) {
   // If all validations pass, submit the form
   const hasErrors = document.querySelectorAll(".error").length > 0;
   if (!hasErrors) {
-    showSuccessMessage("success", "Form submitted successfully!");
+    showSuccessMessage("Form submitted successfully!");
     form.submit();
   }
 }
@@ -64,21 +98,20 @@ function clearError(fieldId) {
   }
 }
 
-function showSuccessMessage() {
-  const popupContainer = document.getElementById("popup-container");
-  const popup = document.createElement("div");
-  popup.classList.add(
-    "popup",
+function showSuccessMessage(message) {
+  // Create a new element for success message
+  const successMessage = document.createElement("div");
+  successMessage.classList.add(
+    "success-message",
     "bg-green-200",
     "text-green-800",
     "p-4",
-    "rounded",
-    "fixed",
-    "top-1/2",
-    "left-1/2",
-    "transform",
-    "-translate-x-1/2",
-    "-translate-y-1/2",
-    "z-50"
+    "rounded-md",
+    "mt-4"
   );
+  successMessage.textContent = message;
+
+  const popupContainer = document.getElementById("popup-container");
+  popupContainer.innerHTML = "";
+  popupContainer.appendChild(successMessage);
 }
