@@ -35,7 +35,7 @@ function validateForm(event) {
   // Valitador Phone Number
 
   const phoneNumber = document.getElementById("pN").value;
-  if (state === "") {
+  if (phoneNumber === "") {
     showError("pN", "Please enter a phone number.");
     const phonePattern = /^\d{3}-\d{3}-\d{4}$/;
     if (!phonePattern.test(phoneNumber)) {
@@ -50,7 +50,7 @@ function validateForm(event) {
     // Validator Email
 
     const email = document.getElementById("Email").value;
-    if (state === "") {
+    if (Email === "") {
       showError("Email", "Please enter an email address.");
       const emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
       if (!emailPattern.test(email)) {

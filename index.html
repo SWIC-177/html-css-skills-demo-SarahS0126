@@ -37,90 +37,90 @@
         </div>
       </div>
 
-        <form
-          id="contactForm"
-          class="bg-purple-100 p-8 rounded-lg shadow-md mt-8"
+      <form
+        id="contactForm"
+        class="bg-purple-100 p-8 rounded-lg shadow-md mt-8"
+      >
+        <h2 class="text-2xl font-semibold mb-4 text-purple-800">
+          I want to get to know you too!
+        </h2>
+        <label for="fN" class="block text-lg text-purple-800"
+          >Your First Name Please!</label
         >
-          <h2 class="text-2xl font-semibold mb-4 text-purple-800">
-            I want to get to know you too!
-          </h2>
-          <label for="fN" class="block text-lg text-purple-800"
-            >Your First Name Please!</label
-          >
-          <input
-            type="text"
-            id="fN"
-            name="firstname"
-            placeholder="Your name..."
-            class="form-input mt-2 block w-full border-purple-400 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-purple-500 focus:border-purple-500"
-          />
+        <input
+          type="text"
+          id="fN"
+          name="firstname"
+          placeholder="Your name..."
+          class="form-input mt-2 block w-full border-purple-400 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-purple-500 focus:border-purple-500"
+        />
 
-          <label for="lN" class="block mt-4 text-lg text-purple-800"
-            >Your Last Name Please!</label
-          >
-          <input
-            type="text"
-            id="lN"
-            name="lastname"
-            placeholder="Your last name..."
-            class="form-input mt-2 block w-full border-purple-400 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-purple-500 focus:border-purple-500"
-          />
-          <label for="state" class="block mt-4 text-lg text-purple-800"
-            >Which state do you live?</label
-          >
-          <select
-            id="country"
-            name="country"
-            class="form-select mt-2 block w-full border-purple-400 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-purple-500 focus:border-purple-500"
-          >
-            <option value="">Please select a state...</option>
-            <option value="Illinois">Illinois</option>
-            <option value="Missouri">Missouri</option>
-            <option value="Prefer not to say">Prefer not to say</option>
-          </select>
+        <label for="lN" class="block mt-4 text-lg text-purple-800"
+          >Your Last Name Please!</label
+        >
+        <input
+          type="text"
+          id="lN"
+          name="lastname"
+          placeholder="Your last name..."
+          class="form-input mt-2 block w-full border-purple-400 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-purple-500 focus:border-purple-500"
+        />
+        <label for="state" class="block mt-4 text-lg text-purple-800"
+          >Which state do you live?</label
+        >
+        <select
+          id="country"
+          name="country"
+          class="form-select mt-2 block w-full border-purple-400 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-purple-500 focus:border-purple-500"
+        >
+          <option value="">Please select a state...</option>
+          <option value="Illinois">Illinois</option>
+          <option value="Missouri">Missouri</option>
+          <option value="Prefer not to say">Prefer not to say</option>
+        </select>
 
-          <label for="pN" class="block mt-4 text-lg text-purple-800"
-            >Your Phone Number Please!</label
-          >
-          <input
-            type="int"
-            phonenumberpattern="^\d{3}-\d{3}-\d{4}$"
-            id="pN"
-            name="phoneNumber"
-            placeholder="Your phone number..."
-            class="form-input mt-2 block w-full border-purple-400 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-purple-500 focus:border-purple-500"
-          />
+        <label for="pN" class="block mt-4 text-lg text-purple-800"
+          >Your Phone Number Please!</label
+        >
+        <input
+          type="int"
+          phonenumberpattern="^\d{3}-\d{3}-\d{4}$"
+          id="pN"
+          name="phoneNumber"
+          placeholder="Your phone number..."
+          class="form-input mt-2 block w-full border-purple-400 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-purple-500 focus:border-purple-500"
+        />
 
-          <label for="Email" class="block mt-4 text-lg text-purple-800"
-            >Your Email Please!</label
-          >
-          <input
-            type="text"
-            emailpattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$"
-            id="Email"
-            name="Email"
-            placeholder="Your Email..."
-            class="form-input mt-2 block w-full border-purple-400 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-purple-500 focus:border-purple-500"
-          />
+        <label for="Email" class="block mt-4 text-lg text-purple-800"
+          >Your Email Please!</label
+        >
+        <input
+          type="text"
+          emailpattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$"
+          id="Email"
+          name="Email"
+          placeholder="Your Email..."
+          class="form-input mt-2 block w-full border-purple-400 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-purple-500 focus:border-purple-500"
+        />
 
-          <label for="subject" class="block mt-4 text-lg text-purple-800"
-            >Write something about yourself that you like!</label
-          >
-          <textarea
-            id="subject"
-            name="subject"
-            placeholder="Write something.."
-            class="form-textarea mt-2 block w-full border-purple-400 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-purple-500 focus:border-purple-500"
-            style="height: 100px"
-          ></textarea>
-          <input
-            type="submit"
-            value="Submit"
-            class="mt-6 bg-purple-500 hover:bg-purple-600 text-gray-00 font-bold py-2 px-6 rounded-md transition duration-300 ease-in-out"
-          />
-        </form>
-      </div>
+        <label for="subject" class="block mt-4 text-lg text-purple-800"
+          >Write something about yourself that you like!</label
+        >
+        <textarea
+          id="subject"
+          name="subject"
+          placeholder="Write something.."
+          class="form-textarea mt-2 block w-full border-purple-400 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-purple-500 focus:border-purple-500"
+          style="height: 100px"
+        ></textarea>
+        <input
+          type="submit"
+          value="Submit"
+          class="mt-6 bg-purple-500 hover:bg-purple-600 text-gray-00 font-bold py-2 px-6 rounded-md transition duration-300 ease-in-out"
+        />
+      </form>
     </div>
+
     <div id="popup-container"></div>
     <script src="script.js"></script>
   </body>
